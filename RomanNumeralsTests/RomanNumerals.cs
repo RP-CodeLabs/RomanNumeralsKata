@@ -18,20 +18,23 @@
                         count++;
                         break;
                     case 'V':
-                        if (NeedToSubstract(count))
-                        {
-                            count -= 2;
-                        }
+                        count = SubstractCount(count);
                         count += 5;
                         break;
                     case 'X':
-                        if (NeedToSubstract(count))
-                        {
-                            count -= 2;
-                        }
+                        count = SubstractCount(count);
                         count += 10;
                         break;
                 }
+            }
+            return count;
+        }
+
+        private int SubstractCount(int count)
+        {
+            if (NeedToSubstract(count))
+            {
+                count -= 2;
             }
             return count;
         }
